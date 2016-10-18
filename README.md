@@ -17,7 +17,7 @@ const Consulr = require('consulr');
 function main() {
   const c = new Consulr({
     prefix: "foo/",
-    quiescencePeriodInMs: 3 * 1000 // 30 sec
+    quiescencePeriodInMs: 3 * 1000 // 3 sec
   });
 
   c.on('update', newValue => {
