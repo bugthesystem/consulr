@@ -1,5 +1,5 @@
 # consulr
-[![Build Status](https://travis-ci.org/ziyasal/consulr.svg?branch=master)](https://travis-ci.org/ziyasal/consulr) [![Coverage Status](https://coveralls.io/repos/github/ziyasal/consulr/badge.svg?branch=master)](https://coveralls.io/github/ziyasal/consulr?branch=master)  
+[![Build Status](https://travis-ci.org/ziyasal/consulr.svg?branch=master)](https://travis-ci.org/ziyasal/consulr) [![Coverage Status](https://coveralls.io/repos/github/ziyasal/consulr/badge.svg?branch=master)](https://coveralls.io/github/ziyasal/consulr?branch=master) [![npm version](https://badge.fury.io/js/consulr.svg)](https://badge.fury.io/js/consulr)  
 
 Decode Consul data into Nodejs and watch for updates
 
