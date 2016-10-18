@@ -42,7 +42,7 @@ test.cb('Consulr: #update', t => {
   c.on('update', newValue => {
     c.close();
     t.deepEqual(newValue, expected);
-    nock.restore();
+    scope.done();
     t.end();
   });
 
