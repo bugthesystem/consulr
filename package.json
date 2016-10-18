@@ -1,6 +1,6 @@
 {
   "name": "consulr",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Decode Consul data into Nodejs and watch for updates",
   "repository": {
     "url": "git@github.com:ziyasal/consulr.git",
@@ -16,7 +16,7 @@
       "url": "http://ziyasal.com"
     }
   ],
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node ./sample/index.js",
     "test": "nyc ava",

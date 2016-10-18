@@ -1,7 +1,7 @@
 import test from 'ava';
 import nock from 'nock';
 
-import Consulr from '../lib/index';
+import Consulr from '../index';
 
 test('Consulr: #ctor should create instance', t => {
   let c = new Consulr({
