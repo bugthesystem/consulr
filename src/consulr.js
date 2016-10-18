@@ -9,7 +9,6 @@ const decode = require('./decode');
 class Consulr extends EventEmitter {
   constructor(settings) {
     super();
-
     this.settings = merge({
       address: C.DEFAULT_HOST,
       port: C.DEFAULT_PORT,
@@ -39,7 +38,7 @@ class Consulr extends EventEmitter {
 
     this.waitIndex = 0;
 
-    this.exponentialBackoff.on('backoff', (number, delay) => {
+    this.exponentialBackoff.on('backoff', () => {
       this.consul.kv.get({
         key: this.settings.prefix,
         recurse: true,
@@ -48,7 +47,7 @@ class Consulr extends EventEmitter {
       }, this._backoffHandler.bind(this));
     });
 
-    this.exponentialBackoff.on('ready', (number, delay) => {
+    this.exponentialBackoff.on('ready', () => {
       this.exponentialBackoff.backoff();
     });
 
@@ -73,6 +72,7 @@ class Consulr extends EventEmitter {
   }
 
   watch(key, handler) {
+    //TODO: implement
     console.log(key);
   }
 
@@ -81,14 +81,13 @@ class Consulr extends EventEmitter {
       this.emit('error', err);
       return this.exponentialBackoff.backoff();
     }
-    let metadata = this.consul.parseQueryMeta(res);
 
+    let metadata = this.consul.parseQueryMeta(res);
     // if same, there is no changes
     if (metadata.LastIndex === this.waitIndex) {
       return;
     }
 
-    //
     this.waitIndex = metadata.LastIndex;
     this.exponentialBackoff.reset();
     let decodeResult = decode(result, this.settings.prefix);
