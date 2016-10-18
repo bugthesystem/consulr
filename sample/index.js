@@ -16,10 +16,6 @@ function main() {
     console.log(`Error value : ${JSON.stringify(err)}`);
   });
 
-  c.watch('bar.data', (oldValue, newValue) => {
-
-  });
-
   c.run();
 }
 

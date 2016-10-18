@@ -10,6 +10,11 @@ test('Consulr: #ctor should create instance', t => {
   t.not(c, null);
 });
 
+
+test('Consulr: #ctor should handle empty prefix', t => {
+  t.throws(()=>{ new Consulr({ prefix: "" }); }, "prefix can't be empty");
+});
+
 test.cb('Consulr: #update', t => {
   let pairs = [
     {
