@@ -47,8 +47,8 @@ class Consulr extends EventEmitter {
         wait: C.DEFAULT_WAIT_TIME_IN_MINUTE
       }, this._backoffHandler.bind(this));
     });
+
     this.exponentialBackoff.on('ready', (number, delay) => {
-      //
       this.exponentialBackoff.backoff();
     });
 
@@ -85,7 +85,6 @@ class Consulr extends EventEmitter {
 
     // if same, there is no changes
     if (metadata.LastIndex === this.waitIndex) {
-      console.log('there is no changes');
       return;
     }
 
