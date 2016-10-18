@@ -29,7 +29,7 @@ test.cb('Consulr: #update', t => {
 
   let expected = {bar: 666};
 
-  var scope = nock('http://127.0.0.1:8500', {allowUnmocked: true})
+  var scope = nock('http://127.0.0.1:8500')
       .defaultReplyHeaders({
         'x-consul-index': '666',
         'x-consul-lastcontact': '10',
