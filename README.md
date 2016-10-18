@@ -2,7 +2,7 @@
 Decode Consul data into Nodejs and watch for updates
 
 > Consul is a tool for service discovery, monitoring and configuration. https://www.consul.io/
-
+[![Build Status](https://travis-ci.org/ziyasal/consulr.svg?branch=master)](https://travis-ci.org/ziyasal/consulr) 
 **Install npm package**
 ```sh
 npm i consulr --save
