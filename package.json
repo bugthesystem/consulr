@@ -1,6 +1,6 @@
 {
   "name": "consulr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Decode Consul data into Nodejs and watch for updates",
   "repository": "ziyasal/consul-sync",
   "bugs": {
