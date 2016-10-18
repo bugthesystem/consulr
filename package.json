@@ -1,0 +1,54 @@
+{
+  "name": "consulr",
+  "version": "1.0.0",
+  "description": "Decode Consul data into Nodejs and watch for updates",
+  "repository": "ziyasal/consul-sync",
+  "bugs": {
+    "url": "https://github.com/ziyasal/consulr/issues"
+  },
+  "contributors": [
+    {
+      "name": "Ziya SARIKAYAA",
+      "email": "sarikayaziya@gmail.com",
+      "url": "http://ziyasal.com"
+    }
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node ./sample/index.js",
+    "test": "nyc ava",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "consul",
+    "config",
+    "sync",
+    "real-time"
+  ],
+  "author": "ziyasal <sarikayaziya@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ziyasal/consulr#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-cli": "^6.16.0",
+    "babel-eslint": "^7.0.0",
+    "babel-preset-es2015": "^6.16.0",
+    "eslint": "^3.7.1",
+    "eslint-config-google": "^0.6.0",
+    "nock": "^8.1.0",
+    "nyc": "^8.3.1"
+  },
+  "dependencies": {
+    "backoff": "^2.5.0",
+    "consul": "^0.27.0",
+    "merge": "^1.2.0"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "google"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": "babel-register"
+  }
+}
