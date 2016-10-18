@@ -1,7 +1,10 @@
 'use strict';
 
-const Consulr = require('./index');
+const Consulr = require('../index');
 
+/**
+ * sample
+ */
 function main() {
   const c = new Consulr({
     prefix: "foo/",
