@@ -1,6 +1,6 @@
 {
   "name": "consulr",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Decode Consul data into Nodejs and watch for updates",
   "repository": {
     "url": "git@github.com:ziyasal/consulr.git",
