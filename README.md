@@ -33,6 +33,17 @@ function main() {
 
 main();
 ```
+## Development
+It uses [yarn](https://github.com/yarnpkg) for dependency management.
+
+```sh
+git clone git@github.com:ziyasal/consulr.git
+cd consulr
+yarn #it will install dependencies
+```
+
+**Testing**
+It uses `Nock` to intercept `consul` http calls in tests.
 
 ##Bugs
 If you encounter a bug, performance issue, or malfunction, please add an [Issue](https://github.com/ziyasal/consulr/issues) with steps on how to reproduce the problem.
