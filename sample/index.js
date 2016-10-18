@@ -1,6 +1,6 @@
 'use strict';
 
-const Consulr = require('../src/index');
+const Consulr = require('./index');
 
 function main() {
   const c = new Consulr({

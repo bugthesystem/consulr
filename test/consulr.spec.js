@@ -1,7 +1,7 @@
 import test from 'ava';
-import  nock from 'nock';
+import nock from 'nock';
 
-import Consulr from '../src/index';
+import Consulr from '../lib/index';
 
 test('Consulr: #ctor should create instance', t => {
   let c = new Consulr({
@@ -13,18 +13,18 @@ test('Consulr: #ctor should create instance', t => {
 test.cb('Consulr: #update', t => {
   let pairs = [
     {
-      'LockIndex': 0,
-      'Value':666,
-      'Key': 'foo/bar',
-      'Flags': 0,
-      'CreateIndex': 531,
-      'ModifyIndex': 653
+      LockIndex: 0,
+      Value: 666,
+      Key: 'foo/bar',
+      Flags: 0,
+      CreateIndex: 531,
+      ModifyIndex: 653
     }
   ];
 
   let expected = {bar: 666};
 
-  var scope = nock('http://127.0.0.1:8500',{allowUnmocked: true})
+  var scope = nock('http://127.0.0.1:8500', {allowUnmocked: true})
       .defaultReplyHeaders({
         'x-consul-index': '666',
         'x-consul-lastcontact': '10',

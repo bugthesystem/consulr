@@ -1,8 +1,11 @@
 {
   "name": "consulr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Decode Consul data into Nodejs and watch for updates",
-  "repository": "ziyasal/consul-sync",
+  "repository": {
+    "url": "git@github.com:ziyasal/consulr.git",
+    "type": "git"
+  },
   "bugs": {
     "url": "https://github.com/ziyasal/consulr/issues"
   },
@@ -17,7 +20,7 @@
   "scripts": {
     "start": "node ./sample/index.js",
     "test": "nyc ava",
-    "lint": "eslint src"
+    "lint": "eslint src test"
   },
   "keywords": [
     "consul",
@@ -33,11 +36,11 @@
     "babel-cli": "^6.16.0",
     "babel-eslint": "^7.0.0",
     "babel-preset-es2015": "^6.16.0",
+    "coveralls": "^2.11.12",
     "eslint": "^3.7.1",
     "eslint-config-google": "^0.6.0",
     "nock": "^8.1.0",
-    "nyc": "^8.3.1",
-    "coveralls": "^2.11.12"
+    "nyc": "^8.3.1"
   },
   "dependencies": {
     "backoff": "^2.5.0",
