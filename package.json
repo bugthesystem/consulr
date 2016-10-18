@@ -20,7 +20,7 @@
   "scripts": {
     "start": "node ./sample/index.js",
     "test": "nyc ava",
-    "lint": "./node_modules/.bin/eslint src test"
+    "lint": "eslint src test"
   },
   "keywords": [
     "consul",
