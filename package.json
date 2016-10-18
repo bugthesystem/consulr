@@ -36,7 +36,8 @@
     "eslint": "^3.7.1",
     "eslint-config-google": "^0.6.0",
     "nock": "^8.1.0",
-    "nyc": "^8.3.1"
+    "nyc": "^8.3.1",
+    "coveralls": "^2.11.12"
   },
   "dependencies": {
     "backoff": "^2.5.0",
