@@ -42,7 +42,7 @@ cd consulr
 yarn #it will install dependencies
 ```
 
-**Testing**
+**Testing**  
 It uses `Nock` to intercept `consul` http calls in tests.
 
 ##Bugs
