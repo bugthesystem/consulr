@@ -43,7 +43,7 @@ yarn #it will install dependencies
 ```
 
 **Testing**  
-It uses `Nock` to intercept `consul` http calls in tests.
+It uses [nock](https://github.com/node-nock/nock) to intercept [consul](https://www.consul.io/) http calls in tests.
 
 ##Bugs
 If you encounter a bug, performance issue, or malfunction, please add an [Issue](https://github.com/ziyasal/consulr/issues) with steps on how to reproduce the problem.
