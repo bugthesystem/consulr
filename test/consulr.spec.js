@@ -10,13 +10,19 @@ test('Consulr: #ctor should create instance', t => {
   t.not(c, null);
 });
 
-test('Consulr: #ctor should handle empty prefix', t => {
+test('#ctor should handle empty prefix', t => {
   t.throws(() => {
     return new Consulr({prefix: ""});
   }, "prefix can't be empty");
 });
 
-test.cb('Consulr: #update', t => {
+test('#ctor should append / to prefix', t => {
+  let c = new Consulr({prefix: "bar"});
+
+  t.is(c.config.prefix, "bar/");
+});
+
+test.cb('should emit `update` when detect changes', t => {
   let pairs = [
     {
       LockIndex: 0,
@@ -53,4 +59,29 @@ test.cb('Consulr: #update', t => {
   });
 
   c.run();
+});
+
+test.cb('Consulr: should emit `error` event on error', t => {
+  var scope = nock('http://127.0.0.1:8500')
+      .get('/v1/kv/bar%2F?recurse=true&index=0&wait=30m')
+      .reply(500);
+
+  let c = new Consulr({
+    prefix: "bar/",
+    quiescencePeriodInMs: 2 * 1000 // 2 sec
+  });
+
+  c.on('error', err => {
+    c.close();
+    t.is('consul: kv.get: internal server error', err.message);
+    scope.done();
+    t.end();
+  });
+
+  c.run();
+});
+
+test.after.always('cleanup', t => {
+  nock.cleanAll();
+  nock.restore();
 });

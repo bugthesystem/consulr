@@ -23,3 +23,15 @@ test('should decode nested', t => {
 
   t.deepEqual(actual, expected);
 });
+
+test('should thrown error when the child is both a data item and dir', t => {
+  let pairs = [
+    {Key: "foo/bar", Value: "baz"},
+    {Key: "foo/bar/data", Value: "ghost"}
+  ];
+  let child = 'bar';
+
+  t.throws(() => {
+    decode(pairs, 'foo/');
+  }, `child is both a data item and dir: ${child}`);
+});
