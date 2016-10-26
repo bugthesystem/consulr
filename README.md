@@ -9,9 +9,14 @@ Decode Consul KV data into JSON in Node.js and watch for updates!
 :warning::warning::warning: Purpose of this project to give extra capabilities to nodejs applications like dynamic configuration changes without SIGHUP signal or manuel restart. So, different solutions have own benefits; this means there is no claim to use **consulr** instead of file based configuration solutions like [consul-template](https://github.com/hashicorp/consul-template) or environment variables based solutions [envconsul](https://github.com/hashicorp/envconsul).
 
 
-**Install npm package**
+**Install with npm**
 ```sh
 npm i consulr --save
+```
+
+**Install with yarn**
+```sh
+yarn add consulr
 ```
 
 **Preview**
