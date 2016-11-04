@@ -1,13 +1,22 @@
 # consulr
 [![Build Status](https://travis-ci.org/ziyasal/consulr.svg?branch=master)](https://travis-ci.org/ziyasal/consulr) [![Coverage Status](https://coveralls.io/repos/github/ziyasal/consulr/badge.svg?branch=master)](https://coveralls.io/github/ziyasal/consulr?branch=master) [![npm version](https://badge.fury.io/js/consulr.svg)](https://badge.fury.io/js/consulr)  [![NPM](https://nodei.co/npm/consulr.png)](https://nodei.co/npm/consulr/)  
 
-Decode Consul data into Nodejs and watch for updates
+Decode Consul KV data into JSON in Node.js and watch for updates!
 
 > Consul is a tool for service discovery, monitoring and configuration. https://www.consul.io/  
 
-**Install npm package**
+**Important**  
+:warning::warning::warning: Purpose of this project to give extra capabilities to nodejs applications like dynamic configuration changes without SIGHUP signal or manuel restart. So, different solutions have own benefits; this means there is no claim to use **consulr** instead of file based configuration solutions like [consul-template](https://github.com/hashicorp/consul-template) or environment variables based solutions [envconsul](https://github.com/hashicorp/envconsul).
+
+
+**Install with npm**
 ```sh
 npm i consulr --save
+```
+
+**Install with yarn**
+```sh
+yarn add consulr
 ```
 
 **Preview**
