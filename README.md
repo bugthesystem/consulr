@@ -54,8 +54,10 @@ yarn #it will install dependencies
 **Testing**  
 It uses [nock](https://github.com/node-nock/nock) to intercept [consul](https://www.consul.io/) http calls in tests.
 
-##Bugs
+## Bugs
 If you encounter a bug, performance issue, or malfunction, please add an [Issue](https://github.com/ziyasal/consulr/issues) with steps on how to reproduce the problem.
 
-##License
+## License
 Code and documentation are available according to the *MIT* License (see [LICENSE](https://github.com/ziyasal/consulr/blob/master/LICENSE)).
+
+z i λ a s a l 
